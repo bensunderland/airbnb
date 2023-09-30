@@ -8,6 +8,9 @@ gem "rails", "~> 7.0.8"
 
 gem "bootstrap"
 gem "sassc-rails"
+gem 'simple_form'
+gem 'devise'
+gem 'rspec-rails'
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
@@ -71,5 +74,5 @@ group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
   gem "selenium-webdriver"
-
+  gem 'shoulda-matchers', '~> 5.0'
 end
