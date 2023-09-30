@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_09_30_142653) do
+ActiveRecord::Schema[7.0].define(version: 2023_09_30_171255) do
   create_table "properties", force: :cascade do |t|
     t.string "name"
     t.string "headline"
@@ -23,6 +23,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_30_142653) do
     t.datetime "updated_at", null: false
     t.string "address_1"
     t.string "address_2"
+    t.float "latitude"
+    t.float "longitude"
+    t.index ["latitude", "longitude"], name: "index_properties_on_latitude_and_longitude"
   end
 
   create_table "users", force: :cascade do |t|
