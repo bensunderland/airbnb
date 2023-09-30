@@ -11,6 +11,8 @@ gem "sassc-rails"
 gem 'simple_form'
 gem 'devise'
 gem 'rspec-rails'
+gem 'faker'
+gem 'geocoder'
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
