@@ -10,9 +10,19 @@ class Property < ApplicationRecord
 
     after_validation :geocode, if: -> { latitude.blank? && longitude.blank? }
 
+    has_many :reviews, as: :reviewable
+
     geocoded_by :address 
+
+    monetize :price_cents, allow_nill: true
+
+    has_many_attached :images
 
     def address 
         [state, country].compact.join(', ')
+    end
+
+    def default_image
+        images.first
     end
 end
